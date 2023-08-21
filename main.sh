@@ -3,9 +3,9 @@
 DEBIAN_FRONTEND=noninteractive
 
 # Clone Upstream
-mkdir -p ./src-pkg-name
-cp -rvf ./debian ./src-pkg-name/
-cd ./src-pkg-name/
+git clone https://gitlab.freedesktop.org/xorg/proto/xcbproto.git -b xcb-proto-1.16.0
+cp -rvf ./debian ./xcbproto/
+cd ./xcbproto/
 
 # Get build deps
 apt-get build-dep ./ -y
